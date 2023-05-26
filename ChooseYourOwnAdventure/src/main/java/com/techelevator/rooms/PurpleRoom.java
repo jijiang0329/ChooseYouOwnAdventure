@@ -23,7 +23,7 @@ public class PurpleRoom {
             if(selectedOption.equals(OPTION_CAKE)){
                 onEatCake(player);
             } else if (selectedOption.equals(OPTION_TALK)) {
-                System.out.println("Here is your KIND energy bar. Cost one coin");
+                System.out.println("Here is the KIND energy bar. Cost one coin");
                 getBar(player);
             } else if(selectedOption.equals(OPTION_LEAVE)){
                 System.out.println("You exit the room");
@@ -36,16 +36,18 @@ public class PurpleRoom {
     }
 
     private void getBar(Player player) {
-        if (player.hasCoin(item)) {
-
+        if(player.hasItem(GameConstants.COIN)){
+            System.out.println("Congratulations! You get a Chocolate Kind bar!");
+            player.addItem(GameConstants.ENERGY_BAR);
+            player.removeItem(GameConstants.COIN);
+        } else {
+            System.out.println("hey dude, you have no coin!");
         }
-
-
-
-        System.out.println("Congratulations! You get a Kind bar!");
-        player.addItem(GameConstants.ENERGY_BAR);
-        player.removeItem(GameConstants.COIN);
     }
+
+
+
+
 
     private void onEatCake(Player player) {
         System.out.println("Congratulations! You eat cake and restore your health!");

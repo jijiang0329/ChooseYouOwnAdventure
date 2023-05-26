@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Player {
 
+
     private int MAX_HEALTH = 100;
     private int MIN_HEALTH = 0;
 
@@ -23,6 +24,9 @@ public class Player {
         } else {
             this.health = health;
         }
+    }
+    public int getMAX_HEALTH() {
+        return MAX_HEALTH;
     }
 
     public boolean hasItem(String item) {
