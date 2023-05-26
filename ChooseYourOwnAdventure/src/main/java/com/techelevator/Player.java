@@ -42,4 +42,7 @@ public class Player {
     public boolean hasCoin(String item) {
         return items.contains(item);
     }
+    public List<String> getItems() {
+        return items;
+    }
 }

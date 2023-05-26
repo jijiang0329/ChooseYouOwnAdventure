@@ -18,7 +18,7 @@ public class BlueRoom {
 
             System.out.println(INTRO);
 
-            String selectedOption = MenuDisplay.prompt(OPTIONS);
+            String selectedOption = MenuDisplay.prompt(OPTIONS,player);
             if(selectedOption.equals(OPTION_1)){
                 onOpenBox(player);
             }else if(selectedOption.equals(OPTION_2)){
