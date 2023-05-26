@@ -5,7 +5,7 @@ import com.techelevator.constants.GameConstants;
 import com.techelevator.menu.MenuDisplay;
 
 public class VioletRoom {
-    private static final String INTRO = "Welcome to the voilet room! There is a box sitting on a table. Do you open it?";
+    private static final String INTRO = "Welcome to the violet room! There is a box sitting on a table. Do you open it?";
 
     private static final String OPTION_1 = "Yes, open the box";
     private static final String OPTION_2 = "Leave room";

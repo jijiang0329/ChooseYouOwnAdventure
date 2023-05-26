@@ -15,6 +15,8 @@ public class Game {
     private static final String OPTION_GREEN = "Go to green room";
     private static final String OPTION_VIOLET = "Go to violet room";
     private static final String OPTION_EXIT = "Exit";
+    private static final String DISPLAY_HEALTH = "";
+    private static final String DISPLAY_ITEMS = "";
     private static final String[] OPTIONS = {OPTION_RED, OPTION_BLUE, OPTION_GREEN, OPTION_VIOLET, OPTION_EXIT};
 
     private BlueRoom blueRoom = new BlueRoom();

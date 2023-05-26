@@ -10,6 +10,7 @@ public class MenuDisplay {
 
         //default value, no option selected yet
         int selectedOption = -1;
+        String checkStatusOption = "";
 
         //keep prompting the user until we call break
         while(true) {
@@ -30,6 +31,18 @@ public class MenuDisplay {
                 if(selectedOption >= 0 && selectedOption < options.length) {
                     break;
                 }
+                if(checkStatusOption == "H" && checkStatusOption == "I") {
+                    break;
+                }
+
+            } catch(Exception ex){
+                //nothing for now
+            }
+            try {
+                printOptions(options);
+
+                //verify the selected option is valid, if so break out of the loop
+
             } catch(Exception ex){
                 //nothing for now
             }
