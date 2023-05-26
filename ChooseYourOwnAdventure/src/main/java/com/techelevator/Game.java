@@ -35,6 +35,7 @@ public class Game {
     public void beginGame() {
 
         Player player = new Player();
+        Robot robot = new Robot();
 
         while(true) {
 
@@ -46,7 +47,7 @@ public class Game {
             }else if(selectedOption.equals(OPTION_BLUE)){
                 blueRoom.onEnterRoom(player);
             }else if(selectedOption.equals(OPTION_GREEN)){
-                greenRoom.onEnterRoom(player);
+                greenRoom.onEnterRoom(player, robot);
             } else if (selectedOption.equals(OPTION_VIOLET)) {
                 violetRoom.onEnterRoom(player);
             } else {
