@@ -32,4 +32,10 @@ public class Player {
     public void addItem(String item) {
         items.add(item);
     }
+    public void removeItem(String item) {
+        items.remove(item);
+    }
+    public boolean hasCoin(String item) {
+        return items.contains(item);
+    }
 }
