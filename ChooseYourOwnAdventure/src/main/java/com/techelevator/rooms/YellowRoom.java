@@ -6,28 +6,29 @@ import com.techelevator.menu.MenuDisplay;
 
 public class YellowRoom {
 
-    private static final String INTRO = "You are now in the yellow room. There is another door in the room with a" +
-            "strange sound coming m it.";
+    private static final String INTRO = "You are now in the yellow room. You see the exit door but it is locked" +
+            " with an electronic lock that requires a 4 digit pin. You also see a desk with a computer and piece" +
+            "of paper on it.";
 
     private static final String OPTION_OPEN = "Try to open door.";
-    private static final String OPTION_YELL = "Yell that you hate the color red";
-    private static final String OPTION_LOBBY = "Go back to the lobby";
-    private static final String[] OPTIONS = {OPTION_OPEN, OPTION_YELL, OPTION_LOBBY};
+    private static final String OPTION_LOBBY = "Go back to the lobby.";
+    public static final String OPTION_READ_PAPER = "Read the piece of paper.";
+    private static final String[] OPTIONS = {OPTION_OPEN, OPTION_READ_PAPER, OPTION_LOBBY};
 
     private YellowRoom yellowRoom = new YellowRoom();
 
     public void onEnterRoom(Player player) {
 
-        while(true) {
+        while (true) {
 
             System.out.println(INTRO);
 
             String selectedOption = MenuDisplay.prompt(OPTIONS);
-            if(selectedOption.equals(OPTION_OPEN)){
+            if (selectedOption.equals(OPTION_OPEN)){
                 onOpenDoor(player);
-            }else if(selectedOption.equals(OPTION_YELL)){
-                onYell(player);
-            }else if(selectedOption.equals(OPTION_LOBBY)){
+            } else if (selectedOption.equals(OPTION_READ_PAPER)){
+
+            } else if (selectedOption.equals(OPTION_LOBBY)){
                 System.out.println("You leave the room");
                 break;
             }
