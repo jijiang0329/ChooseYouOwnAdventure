@@ -6,6 +6,7 @@ import com.techelevator.rooms.GreenRoom;
 import com.techelevator.rooms.RedRoom;
 import com.techelevator.rooms.VioletRoom;
 
+
 public class Game {
 
     private static final String INTRO = "You are in the lobby of a haunted mansion!";
@@ -14,10 +15,13 @@ public class Game {
     private static final String OPTION_BLUE = "Go to blue room";
     private static final String OPTION_GREEN = "Go to green room";
     private static final String OPTION_VIOLET = "Go to violet room";
+    private static final String OPTION_DISPLAY_MAP = "Display the Map";
     private static final String OPTION_EXIT = "Exit";
     private static final String DISPLAY_HEALTH = "";
     private static final String DISPLAY_ITEMS = "";
+    private static final int LINES_TO_CLEAR = 140;
     private static final String[] OPTIONS = {OPTION_RED, OPTION_BLUE, OPTION_GREEN, OPTION_VIOLET, OPTION_EXIT};
+
 
     private BlueRoom blueRoom = new BlueRoom();
     private RedRoom redRoom = new RedRoom();
@@ -36,9 +40,11 @@ public class Game {
 
         Player player = new Player();
         Robot robot = new Robot();
+        Map map = new Map();
 
         while(true) {
-
+            clearScreen();
+            map.drawMap();
             System.out.println(INTRO);
 
             String selectedOption = MenuDisplay.prompt(OPTIONS);
@@ -55,9 +61,14 @@ public class Game {
                 break;
             }
 
-
         }
 
+    }
+
+    public void clearScreen(){
+        for (int i = 0; i < LINES_TO_CLEAR; i++) {
+            System.out.println();
+        }
     }
 
 }

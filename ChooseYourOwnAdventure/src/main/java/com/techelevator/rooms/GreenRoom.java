@@ -1,21 +1,28 @@
 package com.techelevator.rooms;
 
 
+import com.techelevator.Game;
 import com.techelevator.Robot;
 import com.techelevator.menu.MenuDisplay;
 import com.techelevator.Player;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+import static com.techelevator.constants.GameConstants.*;
 
 
 public class GreenRoom {
 
 
-    private static final String INTRO = "Welcome to the green room! There is a robot powered by ChatGPT guarding a door." +
-            "It appears the robot wants to fight you. What do you do?";
+    private static final String INTRO = "Welcome to the green room! There is a robot powered by " +
+            "ChatGPT guarding a door. It appears the robot wants to fight you. What do you do?";
 
 
     private static final String OPTION_FIGHT = "Fight the robot";
     private static final String OPTION_LEAVE = "Leave room";
     private static final String[] OPTIONS = {OPTION_FIGHT, OPTION_LEAVE};
+    private static final int LINES_TO_CLEAR = 65;
 
 
     public void onEnterRoom(Player player, Robot robot) {
@@ -47,11 +54,14 @@ public class GreenRoom {
 
     }
 
-
     private void onFightRobot(Player player, Robot robot) {
+        Scanner scanner = new Scanner(System.in);
+        clearScreen();
 
+        System.out.println(RED + "You engage the robot in combat!" + RESET);
 
         while (player.getHealth() > 0 && robot.getHealth() > 0) {
+
             boolean robotWins = ((int) (Math.random() * 10)) <= 5;
             int attack = (int) (Math.random() * 60);
 
@@ -65,15 +75,11 @@ public class GreenRoom {
             }
             if (player.getHealth() <= 0) {
                 player.setHealth(0);
-
-
             }
             if (robot.getHealth() <= 0) {
                 robot.setHealth(0);
-
-
             }
-            System.out.printf("Your Health: %d  Robot's Health: %d \n" , player.getHealth(), robot.getHealth());
+            System.out.printf(GREEN + "Your Health: %d " + RED + " Robot's Health: %d \n" + RESET , player.getHealth(), robot.getHealth());
         }
     }
     private void consumeBar(Player player) {
@@ -85,4 +91,12 @@ public class GreenRoom {
         System.out.println("You are reborn!");
 
     }
-}
+
+    private void clearScreen(){
+        for (int i = 0; i < LINES_TO_CLEAR; i++) {
+            System.out.println();
+        }
+    }
+
+    }
+
