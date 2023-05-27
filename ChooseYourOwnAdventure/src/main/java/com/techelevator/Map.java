@@ -11,9 +11,9 @@ public class Map {
         System.out.println("║                             ╚═▲═══╝                                    ║");
         System.out.println("║                               │                                        ║");
         System.out.println("║                               │                                        ║");
-        System.out.println("║  ╔═══════╗   ╗═════╔          │               ╔═══════╗                ║");
-        System.out.println("║  ║ PURPLE║◄──║ RED ║◄───═╔═══════╬───────────►║ GREEN ║◄═─╗            ║");
-        System.out.println("║  ║═══════║   ╚═════╝     ║ START ║            ╝═══════║   │            ║");
+        System.out.println("║  ╔═══════╗   ╔═════╗          │               ╔═══════╗                ║");
+        System.out.println("║  ║ PURPLE║◄──║ RED ║◄───═╔═══════╗───────────►║ GREEN ║◄═─╗            ║");
+        System.out.println("║  ╚═══════╝   ╚═════╝     ║ START ║            ╚═══════╝   │            ║");
         System.out.println("║                          ╚═══════╝                        │            ║");
         System.out.println("║                              │                            │            ║");
         System.out.println("║                              │                          ╔═▼════╗       ║");
