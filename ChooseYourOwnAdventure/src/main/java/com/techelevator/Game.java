@@ -45,7 +45,7 @@ public class Game {
             map.drawMap();
             System.out.println(INTRO);
 
-            String selectedOption = MenuDisplay.prompt(OPTIONS);
+            String selectedOption = MenuDisplay.prompt(OPTIONS, player);
             if(selectedOption.equals(OPTION_RED)){
                 redRoom.onEnterRoom(player);
             }else if(selectedOption.equals(OPTION_BLUE)){
