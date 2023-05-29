@@ -23,7 +23,7 @@ public class YellowRoom {
 
             System.out.println(INTRO);
 
-            String selectedOption = MenuDisplay.prompt(OPTIONS);
+            String selectedOption = MenuDisplay.prompt(OPTIONS, player);
             if (selectedOption.equals(OPTION_OPEN)){
                 onOpenDoor(player);
             } else if (selectedOption.equals(OPTION_READ_PAPER)){
