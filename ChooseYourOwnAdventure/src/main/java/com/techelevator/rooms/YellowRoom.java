@@ -40,7 +40,8 @@ public class YellowRoom {
 
     private void onOpenDoor(Player player) {
 
-            System.out.println("The door opens, and you enter the purple room");
+            System.out.println("After defeating the robot, you step through the doorway" +
+                    " and enter the yellow room.");
 
 
     }
