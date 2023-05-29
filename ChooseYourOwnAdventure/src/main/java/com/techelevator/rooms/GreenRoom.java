@@ -33,10 +33,11 @@ public class GreenRoom {
     public static final String BEAT_ROBOT = RED + "You destroyed the robot! Take that AI!" + RESET;
     private static final String[] OPTIONS = {OPTION_FIGHT, OPTION_LEAVE};
     private static final int LINES_TO_CLEAR = 65;
+    private YellowRoom yellowRoom = new YellowRoom();
 
 
     public void onEnterRoom(Player player, Robot robot) {
-
+        //thinking of saying here while robot !defeated, if it is defeated the menu should be different
         while(true) {
 
 
@@ -58,7 +59,8 @@ public class GreenRoom {
 
             if (robot.getHealth() <= 0) {
                 System.out.println(BEAT_ROBOT);
-                System.exit(0);
+                yellowRoom.onEnterRoom(player);
+
             }
 
         }

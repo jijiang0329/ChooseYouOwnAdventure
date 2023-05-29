@@ -15,7 +15,7 @@ public class YellowRoom {
     public static final String OPTION_READ_PAPER = "Read the piece of paper.";
     private static final String[] OPTIONS = {OPTION_OPEN, OPTION_READ_PAPER, OPTION_LOBBY};
 
-    private YellowRoom yellowRoom = new YellowRoom();
+
 
     public void onEnterRoom(Player player) {
 

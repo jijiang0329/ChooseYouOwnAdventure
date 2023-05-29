@@ -1,10 +1,7 @@
 package com.techelevator;
 
 import com.techelevator.menu.MenuDisplay;
-import com.techelevator.rooms.BlueRoom;
-import com.techelevator.rooms.GreenRoom;
-import com.techelevator.rooms.RedRoom;
-import com.techelevator.rooms.VioletRoom;
+import com.techelevator.rooms.*;
 
 
 public class Game {
@@ -27,6 +24,7 @@ public class Game {
     private RedRoom redRoom = new RedRoom();
     private GreenRoom greenRoom = new GreenRoom();
     private VioletRoom violetRoom = new VioletRoom();
+
 
     public static void main(String[] args) {
 
