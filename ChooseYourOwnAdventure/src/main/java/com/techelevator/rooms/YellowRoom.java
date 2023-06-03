@@ -62,7 +62,7 @@ public class YellowRoom {
     }
 
     private void onAccessComputer() {
-        System.out.println("You see a bash prompt. (type 'exit' to stop using the computer)");
+        System.out.println("You see a bash prompt. (type 'exit' to stop using the computer and 'man' for hints)");
         Scanner scanner = new Scanner(System.in);
         boolean inPersonalFolder = false;
 
@@ -80,7 +80,10 @@ public class YellowRoom {
                 inPersonalFolder = true;
                 System.out.println("You are now in the personal folder.");
             } else if (command.equals("cat passwords.txt") && inPersonalFolder) {
-                System.out.println("FB: 1234\nIG: 5678\ndoor pin: 0320\nemail: 9101");
+                System.out.println("FB: 0827\nIG: 0214\ndoor pin: 0320\nemail: 1911");
+            } else if (command.equals("man")) {
+                System.out.println("Commands:\n ls: see contents of folder\n cd: change directory \n cat: " +
+                        "when used with a file name displays it's text contents");
             } else if (command.equals("exit")) {
                 break;
             } else {

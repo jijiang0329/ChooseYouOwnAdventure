@@ -32,7 +32,7 @@ public class GreenRoom {
     public static final String ROBOT_WON = RED + "Unfortunately, ChatGPT destroyed you. GAME OVER!" + RESET;
     public static final String BEAT_ROBOT = RED + "You destroyed the robot! Take that AI!" + RESET;
     private static final String[] OPTIONS = {OPTION_FIGHT, OPTION_LEAVE};
-    private static final int LINES_TO_CLEAR = 65;
+    private static final int LINES_TO_CLEAR = 60;
     private YellowRoom yellowRoom = new YellowRoom();
 
 
@@ -117,7 +117,7 @@ public class GreenRoom {
     }
 
     private void attack(Player player, Robot robot) {
-        boolean robotWins = ((int) (Math.random() * 10)) <= 5;
+        boolean robotWins = ((int) (Math.random() * 10)) <= 4;
         int attack = (int) (Math.random() * 60);
 
 
