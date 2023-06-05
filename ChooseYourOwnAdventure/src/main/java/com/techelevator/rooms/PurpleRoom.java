@@ -11,7 +11,7 @@ public class PurpleRoom {
     private static final String OPTION_CAKE = "Eat the cake";
     private static final String OPTION_TALK = "Talk to your friend";
     private static final String OPTION_LEAVE = "Leave room";
-    private static final String[] OPTIONS = {OPTION_CAKE, OPTION_LEAVE};
+    private static final String[] OPTIONS = {OPTION_CAKE, OPTION_TALK, OPTION_LEAVE};
 
     public void onEnterRoom(Player player) {
 

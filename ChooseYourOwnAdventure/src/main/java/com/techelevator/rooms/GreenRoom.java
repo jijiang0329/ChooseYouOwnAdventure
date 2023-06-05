@@ -43,7 +43,7 @@ public class GreenRoom {
             System.out.println(INTRO);
 
 
-            String selectedOption = MenuDisplay.prompt(OPTIONS);
+            String selectedOption = MenuDisplay.prompt(OPTIONS, player);
             if (selectedOption.equals(OPTION_FIGHT)){
                 onFightRobot(player, robot);
             } else if (selectedOption.equals(OPTION_LEAVE)){
